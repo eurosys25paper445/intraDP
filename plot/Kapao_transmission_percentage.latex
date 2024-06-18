@@ -1,0 +1,12 @@
+\begin{tabular}{c|c|c|c|c}
+\toprule
+environment & \multicolumn{2}{r}{indoors} & \multicolumn{2}{r}{outdoors} \\
+offloading system & SPSO-GA & DSCCS & SPSO-GA & DSCCS \\
+\midrule
+transmitted data/MB & 3.167 & 3.164 & 3.184 & 3.197 \\
+received data/MB & 0.001 & 0.001 & 0.001 & 0.001 \\
+transmission time/s & 0.282 & 0.229 & 0.249 & 0.186 \\
+inference time/s & 0.450 & 0.368 & 0.494 & 0.387 \\
+percentage(%) & 62.716 & 62.310 & 50.348 & 48.086 \\
+\bottomrule
+\end{tabular}

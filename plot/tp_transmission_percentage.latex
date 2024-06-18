@@ -1,0 +1,17 @@
+\begin{tabular}{ccc|c|c|c}
+\toprule
+ &  &  & Transmission time/s & Inference time/s & Percentage(\%) \\
+ &  &  & TP & TP & TP \\
+Model(number of parameters) & Local inference time/s & Environment &  &  &  \\
+\midrule
+\multirow[t]{2}{*}{MobileNet\_V3\_Small(2M)} & \multirow[t]{2}{*}{0.031($\pm$0.004)} & indoors & 0.698($\pm$0.135) & 1.4($\pm$0.232) & 49.85 \\
+ &  & outdoors & 0.901($\pm$0.778) & 1.775($\pm$1.37) & 51.23 \\
+\cline{1-6} \cline{2-6}
+\multirow[t]{2}{*}{ResNet101(44M)} & \multirow[t]{2}{*}{0.065($\pm$0.005)} & indoors & 7.156($\pm$3.348) & 8.106($\pm$3.403) & 87.95 \\
+ &  & outdoors & 8.47($\pm$6.337) & 9.356($\pm$6.328) & 90.46 \\
+\cline{1-6} \cline{2-6}
+\multirow[t]{2}{*}{VGG19\_BN(143M)} & \multirow[t]{2}{*}{0.063($\pm$0.002)} & indoors & 5.152($\pm$4.873) & 5.444($\pm$4.831) & 70.18 \\
+ &  & outdoors & 5.407($\pm$6.673) & 5.759($\pm$6.635) & 93.70 \\
+\cline{1-6} \cline{2-6}
+\bottomrule
+\end{tabular}

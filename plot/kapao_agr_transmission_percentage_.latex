@@ -1,0 +1,16 @@
+\begin{tabular}{ccc|c|c|c|c|c|c}
+\toprule
+ &  &  & \multicolumn{2}{|c|}{Transmission time/s} & \multicolumn{2}{|c|}{Inference time/s} & \multicolumn{2}{|c|}{Percentage(\%)} \\
+ &  &  & indoors & outdoors & indoors & outdoors & indoors & outdoors \\
+Model(number of parameters) & Local computation time/s & System &  &  &  &  &  &  \\
+\midrule
+\multirow[t]{3}{*}{kapao(77M)} & \multirow[t]{3}{*}{1.01($\pm$0.03)} & DSCCS & 0.25($\pm$0.14) & 0.31($\pm$0.15) & 0.37($\pm$0.24) & 0.44($\pm$0.25) & 67.56 & 70.45 \\
+ &  & SPSO-GA & 0.21($\pm$0.1) & 0.24($\pm$0.12) & 0.36($\pm$0.2) & 0.40($\pm$0.17) & 58.33 & 60.21 \\
+ &  & Intra-DP & 0.24($\pm$0.15) & 0.28($\pm$0.13) & 0.31($\pm$0.14) & 0.34($\pm$0.12) & 77.42 & 82.35 \\
+\cline{1-9} \cline{2-9}
+\multirow[t]{3}{*}{agrnav(0.84M)} & \multirow[t]{3}{*}{0.60($\pm$0.04)} & DSCCS & 0.25($\pm$0.11) & 0.35($\pm$0.24) & 0.47($\pm$0.21) & 0.56($\pm$0.05) & 53.19 & 62.49 \\
+ &  & SPSO-GA & 0.10($\pm$0.05) & 0.15($\pm$0.05) & 0.41($\pm$0.11) & 0.47($\pm$0.12) & 24.39 & 31.91\\
+ &  & Intra-DP & 0.24($\pm$0.08) & 0.26($\pm$0.07) & 0.30($\pm$0.09) & 0.33($\pm$0.07) & 78.65 & 79.47 \\
+\cline{1-9} \cline{2-9}
+\bottomrule
+\end{tabular}

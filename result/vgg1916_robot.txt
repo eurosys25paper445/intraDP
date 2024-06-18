@@ -1,0 +1,915 @@
+vgg19 Using device: cuda
+Operation records: ['conv2d', 'relu', 'conv2d', 'relu', 'max_pool2d', 'conv2d', 'relu', 'conv2d', 'relu', 'max_pool2d', 'conv2d', 'relu', 'conv2d', 'relu', 'conv2d', 'relu', 'conv2d', 'relu', 'max_pool2d', 'conv2d', 'relu', 'conv2d', 'relu', 'conv2d', 'relu', 'conv2d', 'relu', 'max_pool2d', 'conv2d', 'relu', 'conv2d', 'relu', 'conv2d', 'relu', 'conv2d', 'relu', 'max_pool2d', 'adaptive_avg_pool2d', 'flatten', 'linear', 'relu', 'dropout', 'linear', 'relu', 'dropout', 'end']
+Profile finished.
+
+inference time: 4846.051 ms, average 4846.051 ms
+op: conv2d, idx: 0, input_idxs: [0], input_shapes: [torch.Size([16, 3, 224, 224]), torch.Size([64, 3, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 9.1943359375 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469176.558284, diff with last stamp 0.000 ms
+op: relu, idx: 1, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469176.5672953, diff with last stamp 9.011 ms
+op: conv2d, idx: 2, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), torch.Size([64, 64, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 196.140869140625 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469176.634298, diff with last stamp 67.003 ms
+op: relu, idx: 3, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469176.6432853, diff with last stamp 8.987 ms
+op: max_pool2d, idx: 4, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), None], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 112, 112])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469176.651278, diff with last stamp 7.993 ms
+op: conv2d, idx: 5, input_idxs: [0], input_shapes: [torch.Size([16, 64, 112, 112]), torch.Size([128, 64, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 49.28173828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469176.6857977, diff with last stamp 34.520 ms
+op: relu, idx: 6, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469176.6905892, diff with last stamp 4.791 ms
+op: conv2d, idx: 7, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), torch.Size([128, 128, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 98.56298828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469176.731997, diff with last stamp 41.408 ms
+op: relu, idx: 8, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469176.7367656, diff with last stamp 4.769 ms
+op: max_pool2d, idx: 9, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), None], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 56, 56])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469176.7410262, diff with last stamp 4.261 ms
+op: conv2d, idx: 10, input_idxs: [0], input_shapes: [torch.Size([16, 128, 56, 56]), torch.Size([256, 128, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 25.6259765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469176.760095, diff with last stamp 19.069 ms
+op: relu, idx: 11, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469176.7627819, diff with last stamp 2.687 ms
+op: conv2d, idx: 12, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469176.7927675, diff with last stamp 29.986 ms
+op: relu, idx: 13, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469176.7954423, diff with last stamp 2.675 ms
+op: conv2d, idx: 14, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469176.8253694, diff with last stamp 29.927 ms
+op: relu, idx: 15, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469176.828076, diff with last stamp 2.707 ms
+op: conv2d, idx: 16, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469176.857905, diff with last stamp 29.829 ms
+op: relu, idx: 17, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469176.860588, diff with last stamp 2.683 ms
+op: max_pool2d, idx: 18, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), None], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 28, 28])], output_size: 12.25 MB, conv: True, barrier: False
+	stamp 1705469176.8630512, diff with last stamp 2.463 ms
+op: conv2d, idx: 19, input_idxs: [0], input_shapes: [torch.Size([16, 256, 28, 28]), torch.Size([512, 256, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 16.751953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469176.8782463, diff with last stamp 15.195 ms
+op: relu, idx: 20, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469176.8798523, diff with last stamp 1.606 ms
+op: conv2d, idx: 21, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469176.9062378, diff with last stamp 26.386 ms
+op: relu, idx: 22, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469176.907876, diff with last stamp 1.638 ms
+op: conv2d, idx: 23, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469176.9344401, diff with last stamp 26.564 ms
+op: relu, idx: 24, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469176.9362886, diff with last stamp 1.848 ms
+op: conv2d, idx: 25, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469176.9628773, diff with last stamp 26.589 ms
+op: relu, idx: 26, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469176.9646077, diff with last stamp 1.730 ms
+op: max_pool2d, idx: 27, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), None], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469176.9660969, diff with last stamp 1.489 ms
+op: conv2d, idx: 28, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469176.9760108, diff with last stamp 9.914 ms
+op: relu, idx: 29, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469176.9768755, diff with last stamp 0.865 ms
+op: conv2d, idx: 30, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469176.986906, diff with last stamp 10.031 ms
+op: relu, idx: 31, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469176.987884, diff with last stamp 0.978 ms
+op: conv2d, idx: 32, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469176.9977713, diff with last stamp 9.887 ms
+op: relu, idx: 33, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469176.9985805, diff with last stamp 0.809 ms
+op: conv2d, idx: 34, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469177.008569, diff with last stamp 9.989 ms
+op: relu, idx: 35, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469177.009367, diff with last stamp 0.798 ms
+op: max_pool2d, idx: 36, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), None], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469177.0101795, diff with last stamp 0.813 ms
+op: adaptive_avg_pool2d, idx: 37, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469177.011506, diff with last stamp 1.327 ms
+op: flatten, idx: 38, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 25088])], output_size: 1.53125 MB, conv: False, barrier: True
+	stamp 1705469177.0117161, diff with last stamp 0.210 ms
+op: linear, idx: 39, input_idxs: [0], input_shapes: [torch.Size([16, 25088]), torch.Size([4096, 25088]), torch.Size([4096])], input_size: 393.546875 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469177.036705, diff with last stamp 24.989 ms
+op: relu, idx: 40, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469177.0372767, diff with last stamp 0.572 ms
+op: dropout, idx: 41, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469177.0375342, diff with last stamp 0.257 ms
+op: linear, idx: 42, input_idxs: [0], input_shapes: [torch.Size([16, 4096]), torch.Size([4096, 4096]), torch.Size([4096])], input_size: 64.265625 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469177.0414631, diff with last stamp 3.929 ms
+op: relu, idx: 43, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469177.0420055, diff with last stamp 0.542 ms
+op: dropout, idx: 44, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469177.0422115, diff with last stamp 0.206 ms
+inference time: 501.255 ms, average 2673.653 ms
+op: conv2d, idx: 0, input_idxs: [0], input_shapes: [torch.Size([16, 3, 224, 224]), torch.Size([64, 3, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 9.1943359375 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469177.2862506, diff with last stamp 244.039 ms
+op: relu, idx: 1, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469177.2951832, diff with last stamp 8.933 ms
+op: conv2d, idx: 2, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), torch.Size([64, 64, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 196.140869140625 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469177.3624458, diff with last stamp 67.263 ms
+op: relu, idx: 3, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469177.3718693, diff with last stamp 9.423 ms
+op: max_pool2d, idx: 4, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), None], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 112, 112])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469177.3800206, diff with last stamp 8.151 ms
+op: conv2d, idx: 5, input_idxs: [0], input_shapes: [torch.Size([16, 64, 112, 112]), torch.Size([128, 64, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 49.28173828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469177.41479, diff with last stamp 34.769 ms
+op: relu, idx: 6, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469177.4195757, diff with last stamp 4.786 ms
+op: conv2d, idx: 7, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), torch.Size([128, 128, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 98.56298828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469177.4612203, diff with last stamp 41.645 ms
+op: relu, idx: 8, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469177.46607, diff with last stamp 4.850 ms
+op: max_pool2d, idx: 9, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), None], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 56, 56])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469177.4703298, diff with last stamp 4.260 ms
+op: conv2d, idx: 10, input_idxs: [0], input_shapes: [torch.Size([16, 128, 56, 56]), torch.Size([256, 128, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 25.6259765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469177.489693, diff with last stamp 19.363 ms
+op: relu, idx: 11, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469177.4923623, diff with last stamp 2.669 ms
+op: conv2d, idx: 12, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469177.5225987, diff with last stamp 30.236 ms
+op: relu, idx: 13, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469177.5252855, diff with last stamp 2.687 ms
+op: conv2d, idx: 14, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469177.5555336, diff with last stamp 30.248 ms
+op: relu, idx: 15, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469177.5579891, diff with last stamp 2.455 ms
+op: conv2d, idx: 16, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469177.5876944, diff with last stamp 29.705 ms
+op: relu, idx: 17, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469177.5900722, diff with last stamp 2.378 ms
+op: max_pool2d, idx: 18, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), None], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 28, 28])], output_size: 12.25 MB, conv: True, barrier: False
+	stamp 1705469177.5921967, diff with last stamp 2.125 ms
+op: conv2d, idx: 19, input_idxs: [0], input_shapes: [torch.Size([16, 256, 28, 28]), torch.Size([512, 256, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 16.751953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469177.6072707, diff with last stamp 15.074 ms
+op: relu, idx: 20, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469177.6085858, diff with last stamp 1.315 ms
+op: conv2d, idx: 21, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469177.634903, diff with last stamp 26.317 ms
+op: relu, idx: 22, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469177.6363416, diff with last stamp 1.439 ms
+op: conv2d, idx: 23, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469177.662543, diff with last stamp 26.201 ms
+op: relu, idx: 24, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469177.6639302, diff with last stamp 1.387 ms
+op: conv2d, idx: 25, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469177.6902425, diff with last stamp 26.312 ms
+op: relu, idx: 26, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469177.6915927, diff with last stamp 1.350 ms
+op: max_pool2d, idx: 27, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), None], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469177.6928184, diff with last stamp 1.226 ms
+op: conv2d, idx: 28, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469177.702446, diff with last stamp 9.628 ms
+op: relu, idx: 29, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469177.702962, diff with last stamp 0.516 ms
+op: conv2d, idx: 30, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469177.7125368, diff with last stamp 9.575 ms
+op: relu, idx: 31, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469177.7130811, diff with last stamp 0.544 ms
+op: conv2d, idx: 32, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469177.722673, diff with last stamp 9.592 ms
+op: relu, idx: 33, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469177.7233033, diff with last stamp 0.630 ms
+op: conv2d, idx: 34, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469177.7329557, diff with last stamp 9.652 ms
+op: relu, idx: 35, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469177.7335432, diff with last stamp 0.587 ms
+op: max_pool2d, idx: 36, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), None], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469177.7340906, diff with last stamp 0.547 ms
+op: adaptive_avg_pool2d, idx: 37, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469177.7351575, diff with last stamp 1.067 ms
+op: flatten, idx: 38, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 25088])], output_size: 1.53125 MB, conv: False, barrier: True
+	stamp 1705469177.73541, diff with last stamp 0.252 ms
+op: linear, idx: 39, input_idxs: [0], input_shapes: [torch.Size([16, 25088]), torch.Size([4096, 25088]), torch.Size([4096])], input_size: 393.546875 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469177.761047, diff with last stamp 25.637 ms
+op: relu, idx: 40, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469177.7612927, diff with last stamp 0.246 ms
+op: dropout, idx: 41, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469177.76149, diff with last stamp 0.197 ms
+op: linear, idx: 42, input_idxs: [0], input_shapes: [torch.Size([16, 4096]), torch.Size([4096, 4096]), torch.Size([4096])], input_size: 64.265625 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469177.7650719, diff with last stamp 3.582 ms
+op: relu, idx: 43, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469177.7653432, diff with last stamp 0.271 ms
+op: dropout, idx: 44, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469177.765557, diff with last stamp 0.214 ms
+inference time: 496.507 ms, average 1947.938 ms
+op: conv2d, idx: 0, input_idxs: [0], input_shapes: [torch.Size([16, 3, 224, 224]), torch.Size([64, 3, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 9.1943359375 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469177.9913015, diff with last stamp 225.744 ms
+op: relu, idx: 1, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469178.0000224, diff with last stamp 8.721 ms
+op: conv2d, idx: 2, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), torch.Size([64, 64, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 196.140869140625 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469178.0670469, diff with last stamp 67.024 ms
+op: relu, idx: 3, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469178.0757668, diff with last stamp 8.720 ms
+op: max_pool2d, idx: 4, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), None], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 112, 112])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469178.0834906, diff with last stamp 7.724 ms
+op: conv2d, idx: 5, input_idxs: [0], input_shapes: [torch.Size([16, 64, 112, 112]), torch.Size([128, 64, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 49.28173828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469178.1178327, diff with last stamp 34.342 ms
+op: relu, idx: 6, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469178.1223526, diff with last stamp 4.520 ms
+op: conv2d, idx: 7, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), torch.Size([128, 128, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 98.56298828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469178.1634197, diff with last stamp 41.067 ms
+op: relu, idx: 8, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469178.167907, diff with last stamp 4.487 ms
+op: max_pool2d, idx: 9, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), None], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 56, 56])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469178.1719053, diff with last stamp 3.998 ms
+op: conv2d, idx: 10, input_idxs: [0], input_shapes: [torch.Size([16, 128, 56, 56]), torch.Size([256, 128, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 25.6259765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469178.1906128, diff with last stamp 18.708 ms
+op: relu, idx: 11, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469178.193066, diff with last stamp 2.453 ms
+op: conv2d, idx: 12, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469178.2227652, diff with last stamp 29.699 ms
+op: relu, idx: 13, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469178.225157, diff with last stamp 2.392 ms
+op: conv2d, idx: 14, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469178.2548063, diff with last stamp 29.649 ms
+op: relu, idx: 15, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469178.2571864, diff with last stamp 2.380 ms
+op: conv2d, idx: 16, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469178.286806, diff with last stamp 29.620 ms
+op: relu, idx: 17, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469178.2891967, diff with last stamp 2.391 ms
+op: max_pool2d, idx: 18, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), None], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 28, 28])], output_size: 12.25 MB, conv: True, barrier: False
+	stamp 1705469178.2914376, diff with last stamp 2.241 ms
+op: conv2d, idx: 19, input_idxs: [0], input_shapes: [torch.Size([16, 256, 28, 28]), torch.Size([512, 256, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 16.751953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469178.3064036, diff with last stamp 14.966 ms
+op: relu, idx: 20, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469178.3077369, diff with last stamp 1.333 ms
+op: conv2d, idx: 21, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469178.3337975, diff with last stamp 26.061 ms
+op: relu, idx: 22, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469178.3351624, diff with last stamp 1.365 ms
+op: conv2d, idx: 23, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469178.3613718, diff with last stamp 26.209 ms
+op: relu, idx: 24, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469178.3627625, diff with last stamp 1.391 ms
+op: conv2d, idx: 25, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469178.3891442, diff with last stamp 26.382 ms
+op: relu, idx: 26, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469178.3906987, diff with last stamp 1.554 ms
+op: max_pool2d, idx: 27, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), None], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469178.392062, diff with last stamp 1.363 ms
+op: conv2d, idx: 28, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469178.4017124, diff with last stamp 9.650 ms
+op: relu, idx: 29, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469178.4022799, diff with last stamp 0.567 ms
+op: conv2d, idx: 30, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469178.4119306, diff with last stamp 9.651 ms
+op: relu, idx: 31, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469178.4124632, diff with last stamp 0.533 ms
+op: conv2d, idx: 32, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469178.4220815, diff with last stamp 9.618 ms
+op: relu, idx: 33, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469178.422619, diff with last stamp 0.538 ms
+op: conv2d, idx: 34, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469178.432354, diff with last stamp 9.735 ms
+op: relu, idx: 35, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469178.4329207, diff with last stamp 0.567 ms
+op: max_pool2d, idx: 36, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), None], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469178.4335058, diff with last stamp 0.585 ms
+op: adaptive_avg_pool2d, idx: 37, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469178.4345787, diff with last stamp 1.073 ms
+op: flatten, idx: 38, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 25088])], output_size: 1.53125 MB, conv: False, barrier: True
+	stamp 1705469178.4348762, diff with last stamp 0.298 ms
+op: linear, idx: 39, input_idxs: [0], input_shapes: [torch.Size([16, 25088]), torch.Size([4096, 25088]), torch.Size([4096])], input_size: 393.546875 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469178.4583652, diff with last stamp 23.489 ms
+op: relu, idx: 40, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469178.4586792, diff with last stamp 0.314 ms
+op: dropout, idx: 41, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469178.4589865, diff with last stamp 0.307 ms
+op: linear, idx: 42, input_idxs: [0], input_shapes: [torch.Size([16, 4096]), torch.Size([4096, 4096]), torch.Size([4096])], input_size: 64.265625 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469178.4626625, diff with last stamp 3.676 ms
+op: relu, idx: 43, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469178.462984, diff with last stamp 0.322 ms
+op: dropout, idx: 44, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469178.4631586, diff with last stamp 0.175 ms
+inference time: 488.762 ms, average 1583.144 ms
+op: conv2d, idx: 0, input_idxs: [0], input_shapes: [torch.Size([16, 3, 224, 224]), torch.Size([64, 3, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 9.1943359375 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469178.691381, diff with last stamp 228.222 ms
+op: relu, idx: 1, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469178.7001812, diff with last stamp 8.800 ms
+op: conv2d, idx: 2, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), torch.Size([64, 64, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 196.140869140625 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469178.7672412, diff with last stamp 67.060 ms
+op: relu, idx: 3, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469178.7759619, diff with last stamp 8.721 ms
+op: max_pool2d, idx: 4, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), None], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 112, 112])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469178.783699, diff with last stamp 7.737 ms
+op: conv2d, idx: 5, input_idxs: [0], input_shapes: [torch.Size([16, 64, 112, 112]), torch.Size([128, 64, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 49.28173828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469178.8179958, diff with last stamp 34.297 ms
+op: relu, idx: 6, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469178.8226967, diff with last stamp 4.701 ms
+op: conv2d, idx: 7, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), torch.Size([128, 128, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 98.56298828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469178.8640735, diff with last stamp 41.377 ms
+op: relu, idx: 8, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469178.8686388, diff with last stamp 4.565 ms
+op: max_pool2d, idx: 9, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), None], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 56, 56])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469178.8726406, diff with last stamp 4.002 ms
+op: conv2d, idx: 10, input_idxs: [0], input_shapes: [torch.Size([16, 128, 56, 56]), torch.Size([256, 128, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 25.6259765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469178.89152, diff with last stamp 18.879 ms
+op: relu, idx: 11, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469178.8939018, diff with last stamp 2.382 ms
+op: conv2d, idx: 12, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469178.9236245, diff with last stamp 29.723 ms
+op: relu, idx: 13, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469178.9260194, diff with last stamp 2.395 ms
+op: conv2d, idx: 14, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469178.955792, diff with last stamp 29.773 ms
+op: relu, idx: 15, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469178.9581606, diff with last stamp 2.369 ms
+op: conv2d, idx: 16, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469178.9877362, diff with last stamp 29.576 ms
+op: relu, idx: 17, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469178.9901319, diff with last stamp 2.396 ms
+op: max_pool2d, idx: 18, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), None], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 28, 28])], output_size: 12.25 MB, conv: True, barrier: False
+	stamp 1705469178.992335, diff with last stamp 2.203 ms
+op: conv2d, idx: 19, input_idxs: [0], input_shapes: [torch.Size([16, 256, 28, 28]), torch.Size([512, 256, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 16.751953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469179.0073056, diff with last stamp 14.971 ms
+op: relu, idx: 20, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469179.008658, diff with last stamp 1.352 ms
+op: conv2d, idx: 21, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469179.034828, diff with last stamp 26.170 ms
+op: relu, idx: 22, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469179.0361552, diff with last stamp 1.327 ms
+op: conv2d, idx: 23, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469179.0623765, diff with last stamp 26.221 ms
+op: relu, idx: 24, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469179.063759, diff with last stamp 1.383 ms
+op: conv2d, idx: 25, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469179.0900087, diff with last stamp 26.250 ms
+op: relu, idx: 26, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469179.091342, diff with last stamp 1.333 ms
+op: max_pool2d, idx: 27, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), None], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469179.0925353, diff with last stamp 1.193 ms
+op: conv2d, idx: 28, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469179.1022635, diff with last stamp 9.728 ms
+op: relu, idx: 29, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469179.1028485, diff with last stamp 0.585 ms
+op: conv2d, idx: 30, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469179.1124802, diff with last stamp 9.632 ms
+op: relu, idx: 31, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469179.1130176, diff with last stamp 0.537 ms
+op: conv2d, idx: 32, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469179.1225562, diff with last stamp 9.539 ms
+op: relu, idx: 33, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469179.123178, diff with last stamp 0.622 ms
+op: conv2d, idx: 34, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469179.1326973, diff with last stamp 9.519 ms
+op: relu, idx: 35, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469179.1332405, diff with last stamp 0.543 ms
+op: max_pool2d, idx: 36, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), None], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469179.1337802, diff with last stamp 0.540 ms
+op: adaptive_avg_pool2d, idx: 37, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469179.1348486, diff with last stamp 1.068 ms
+op: flatten, idx: 38, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 25088])], output_size: 1.53125 MB, conv: False, barrier: True
+	stamp 1705469179.1350589, diff with last stamp 0.210 ms
+op: linear, idx: 39, input_idxs: [0], input_shapes: [torch.Size([16, 25088]), torch.Size([4096, 25088]), torch.Size([4096])], input_size: 393.546875 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469179.159233, diff with last stamp 24.174 ms
+op: relu, idx: 40, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469179.1595037, diff with last stamp 0.271 ms
+op: dropout, idx: 41, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469179.1597383, diff with last stamp 0.235 ms
+op: linear, idx: 42, input_idxs: [0], input_shapes: [torch.Size([16, 4096]), torch.Size([4096, 4096]), torch.Size([4096])], input_size: 64.265625 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469179.163377, diff with last stamp 3.639 ms
+op: relu, idx: 43, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469179.1636257, diff with last stamp 0.249 ms
+op: dropout, idx: 44, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469179.1637988, diff with last stamp 0.173 ms
+inference time: 489.721 ms, average 1364.459 ms
+op: conv2d, idx: 0, input_idxs: [0], input_shapes: [torch.Size([16, 3, 224, 224]), torch.Size([64, 3, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 9.1943359375 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469179.3910894, diff with last stamp 227.291 ms
+op: relu, idx: 1, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469179.3998742, diff with last stamp 8.785 ms
+op: conv2d, idx: 2, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), torch.Size([64, 64, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 196.140869140625 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469179.4668407, diff with last stamp 66.967 ms
+op: relu, idx: 3, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469179.475601, diff with last stamp 8.760 ms
+op: max_pool2d, idx: 4, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), None], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 112, 112])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469179.4833367, diff with last stamp 7.736 ms
+op: conv2d, idx: 5, input_idxs: [0], input_shapes: [torch.Size([16, 64, 112, 112]), torch.Size([128, 64, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 49.28173828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469179.517582, diff with last stamp 34.245 ms
+op: relu, idx: 6, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469179.5221045, diff with last stamp 4.523 ms
+op: conv2d, idx: 7, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), torch.Size([128, 128, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 98.56298828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469179.5631516, diff with last stamp 41.047 ms
+op: relu, idx: 8, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469179.5676768, diff with last stamp 4.525 ms
+op: max_pool2d, idx: 9, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), None], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 56, 56])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469179.571703, diff with last stamp 4.026 ms
+op: conv2d, idx: 10, input_idxs: [0], input_shapes: [torch.Size([16, 128, 56, 56]), torch.Size([256, 128, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 25.6259765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469179.5904357, diff with last stamp 18.733 ms
+op: relu, idx: 11, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469179.5928493, diff with last stamp 2.414 ms
+op: conv2d, idx: 12, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469179.6225789, diff with last stamp 29.730 ms
+op: relu, idx: 13, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469179.6250906, diff with last stamp 2.512 ms
+op: conv2d, idx: 14, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469179.6549363, diff with last stamp 29.846 ms
+op: relu, idx: 15, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469179.6574228, diff with last stamp 2.486 ms
+op: conv2d, idx: 16, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469179.687298, diff with last stamp 29.875 ms
+op: relu, idx: 17, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469179.6896935, diff with last stamp 2.395 ms
+op: max_pool2d, idx: 18, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), None], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 28, 28])], output_size: 12.25 MB, conv: True, barrier: False
+	stamp 1705469179.6918342, diff with last stamp 2.141 ms
+op: conv2d, idx: 19, input_idxs: [0], input_shapes: [torch.Size([16, 256, 28, 28]), torch.Size([512, 256, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 16.751953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469179.7068913, diff with last stamp 15.057 ms
+op: relu, idx: 20, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469179.708209, diff with last stamp 1.318 ms
+op: conv2d, idx: 21, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469179.7349079, diff with last stamp 26.699 ms
+op: relu, idx: 22, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469179.736518, diff with last stamp 1.610 ms
+op: conv2d, idx: 23, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469179.7629714, diff with last stamp 26.453 ms
+op: relu, idx: 24, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469179.7643044, diff with last stamp 1.333 ms
+op: conv2d, idx: 25, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469179.7906716, diff with last stamp 26.367 ms
+op: relu, idx: 26, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469179.7921267, diff with last stamp 1.455 ms
+op: max_pool2d, idx: 27, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), None], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469179.793363, diff with last stamp 1.236 ms
+op: conv2d, idx: 28, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469179.8030066, diff with last stamp 9.644 ms
+op: relu, idx: 29, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469179.8035634, diff with last stamp 0.557 ms
+op: conv2d, idx: 30, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469179.8131564, diff with last stamp 9.593 ms
+op: relu, idx: 31, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469179.813682, diff with last stamp 0.526 ms
+op: conv2d, idx: 32, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469179.8233356, diff with last stamp 9.654 ms
+op: relu, idx: 33, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469179.8238585, diff with last stamp 0.523 ms
+op: conv2d, idx: 34, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469179.8333635, diff with last stamp 9.505 ms
+op: relu, idx: 35, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469179.833916, diff with last stamp 0.552 ms
+op: max_pool2d, idx: 36, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), None], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469179.834483, diff with last stamp 0.567 ms
+op: adaptive_avg_pool2d, idx: 37, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469179.835627, diff with last stamp 1.144 ms
+op: flatten, idx: 38, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 25088])], output_size: 1.53125 MB, conv: False, barrier: True
+	stamp 1705469179.8358552, diff with last stamp 0.228 ms
+op: linear, idx: 39, input_idxs: [0], input_shapes: [torch.Size([16, 25088]), torch.Size([4096, 25088]), torch.Size([4096])], input_size: 393.546875 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469179.8615148, diff with last stamp 25.660 ms
+op: relu, idx: 40, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469179.8618286, diff with last stamp 0.314 ms
+op: dropout, idx: 41, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469179.8620627, diff with last stamp 0.234 ms
+op: linear, idx: 42, input_idxs: [0], input_shapes: [torch.Size([16, 4096]), torch.Size([4096, 4096]), torch.Size([4096])], input_size: 64.265625 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469179.8657622, diff with last stamp 3.700 ms
+op: relu, idx: 43, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469179.8660028, diff with last stamp 0.241 ms
+op: dropout, idx: 44, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469179.8661816, diff with last stamp 0.179 ms
+inference time: 491.968 ms, average 1219.044 ms
+op: conv2d, idx: 0, input_idxs: [0], input_shapes: [torch.Size([16, 3, 224, 224]), torch.Size([64, 3, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 9.1943359375 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469180.1669831, diff with last stamp 300.802 ms
+op: relu, idx: 1, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469180.175755, diff with last stamp 8.772 ms
+op: conv2d, idx: 2, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), torch.Size([64, 64, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 196.140869140625 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469180.2427711, diff with last stamp 67.016 ms
+op: relu, idx: 3, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469180.2514715, diff with last stamp 8.700 ms
+op: max_pool2d, idx: 4, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), None], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 112, 112])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469180.2592292, diff with last stamp 7.758 ms
+op: conv2d, idx: 5, input_idxs: [0], input_shapes: [torch.Size([16, 64, 112, 112]), torch.Size([128, 64, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 49.28173828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469180.2934048, diff with last stamp 34.176 ms
+op: relu, idx: 6, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469180.2978847, diff with last stamp 4.480 ms
+op: conv2d, idx: 7, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), torch.Size([128, 128, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 98.56298828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469180.3388727, diff with last stamp 40.988 ms
+op: relu, idx: 8, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469180.3433795, diff with last stamp 4.507 ms
+op: max_pool2d, idx: 9, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), None], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 56, 56])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469180.3473575, diff with last stamp 3.978 ms
+op: conv2d, idx: 10, input_idxs: [0], input_shapes: [torch.Size([16, 128, 56, 56]), torch.Size([256, 128, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 25.6259765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469180.3661394, diff with last stamp 18.782 ms
+op: relu, idx: 11, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469180.3684888, diff with last stamp 2.349 ms
+op: conv2d, idx: 12, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469180.3989189, diff with last stamp 30.430 ms
+op: relu, idx: 13, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469180.4047043, diff with last stamp 5.785 ms
+op: conv2d, idx: 14, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469180.4351084, diff with last stamp 30.404 ms
+op: relu, idx: 15, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469180.4376907, diff with last stamp 2.582 ms
+op: conv2d, idx: 16, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469180.4673958, diff with last stamp 29.705 ms
+op: relu, idx: 17, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469180.469866, diff with last stamp 2.470 ms
+op: max_pool2d, idx: 18, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), None], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 28, 28])], output_size: 12.25 MB, conv: True, barrier: False
+	stamp 1705469180.4720085, diff with last stamp 2.142 ms
+op: conv2d, idx: 19, input_idxs: [0], input_shapes: [torch.Size([16, 256, 28, 28]), torch.Size([512, 256, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 16.751953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469180.4869678, diff with last stamp 14.959 ms
+op: relu, idx: 20, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469180.4883108, diff with last stamp 1.343 ms
+op: conv2d, idx: 21, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469180.5145876, diff with last stamp 26.277 ms
+op: relu, idx: 22, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469180.516067, diff with last stamp 1.479 ms
+op: conv2d, idx: 23, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469180.5423126, diff with last stamp 26.246 ms
+op: relu, idx: 24, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469180.5436735, diff with last stamp 1.361 ms
+op: conv2d, idx: 25, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469180.570098, diff with last stamp 26.424 ms
+op: relu, idx: 26, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469180.5716138, diff with last stamp 1.516 ms
+op: max_pool2d, idx: 27, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), None], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469180.5728772, diff with last stamp 1.263 ms
+op: conv2d, idx: 28, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469180.5827541, diff with last stamp 9.877 ms
+op: relu, idx: 29, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469180.583283, diff with last stamp 0.529 ms
+op: conv2d, idx: 30, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469180.5928667, diff with last stamp 9.584 ms
+op: relu, idx: 31, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469180.5933895, diff with last stamp 0.523 ms
+op: conv2d, idx: 32, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469180.6030238, diff with last stamp 9.634 ms
+op: relu, idx: 33, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469180.6035445, diff with last stamp 0.521 ms
+op: conv2d, idx: 34, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469180.6131134, diff with last stamp 9.569 ms
+op: relu, idx: 35, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469180.6136384, diff with last stamp 0.525 ms
+op: max_pool2d, idx: 36, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), None], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469180.6142104, diff with last stamp 0.572 ms
+op: adaptive_avg_pool2d, idx: 37, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469180.615326, diff with last stamp 1.116 ms
+op: flatten, idx: 38, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 25088])], output_size: 1.53125 MB, conv: False, barrier: True
+	stamp 1705469180.6155589, diff with last stamp 0.233 ms
+op: linear, idx: 39, input_idxs: [0], input_shapes: [torch.Size([16, 25088]), torch.Size([4096, 25088]), torch.Size([4096])], input_size: 393.546875 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469180.64058, diff with last stamp 25.021 ms
+op: relu, idx: 40, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469180.6409192, diff with last stamp 0.339 ms
+op: dropout, idx: 41, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469180.641159, diff with last stamp 0.240 ms
+op: linear, idx: 42, input_idxs: [0], input_shapes: [torch.Size([16, 4096]), torch.Size([4096, 4096]), torch.Size([4096])], input_size: 64.265625 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469180.6448176, diff with last stamp 3.659 ms
+op: relu, idx: 43, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469180.6450634, diff with last stamp 0.246 ms
+op: dropout, idx: 44, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469180.6452909, diff with last stamp 0.227 ms
+inference time: 495.195 ms, average 1115.637 ms
+op: conv2d, idx: 0, input_idxs: [0], input_shapes: [torch.Size([16, 3, 224, 224]), torch.Size([64, 3, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 9.1943359375 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469180.919607, diff with last stamp 274.316 ms
+op: relu, idx: 1, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469180.9283595, diff with last stamp 8.753 ms
+op: conv2d, idx: 2, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), torch.Size([64, 64, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 196.140869140625 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469180.995411, diff with last stamp 67.051 ms
+op: relu, idx: 3, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469181.0041835, diff with last stamp 8.773 ms
+op: max_pool2d, idx: 4, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), None], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 112, 112])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469181.0120184, diff with last stamp 7.835 ms
+op: conv2d, idx: 5, input_idxs: [0], input_shapes: [torch.Size([16, 64, 112, 112]), torch.Size([128, 64, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 49.28173828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469181.0463328, diff with last stamp 34.314 ms
+op: relu, idx: 6, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469181.0508158, diff with last stamp 4.483 ms
+op: conv2d, idx: 7, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), torch.Size([128, 128, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 98.56298828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469181.0920134, diff with last stamp 41.198 ms
+op: relu, idx: 8, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469181.0966766, diff with last stamp 4.663 ms
+op: max_pool2d, idx: 9, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), None], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 56, 56])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469181.1006732, diff with last stamp 3.997 ms
+op: conv2d, idx: 10, input_idxs: [0], input_shapes: [torch.Size([16, 128, 56, 56]), torch.Size([256, 128, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 25.6259765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469181.1194746, diff with last stamp 18.801 ms
+op: relu, idx: 11, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469181.1219194, diff with last stamp 2.445 ms
+op: conv2d, idx: 12, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469181.151652, diff with last stamp 29.733 ms
+op: relu, idx: 13, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469181.1540062, diff with last stamp 2.354 ms
+op: conv2d, idx: 14, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469181.1836674, diff with last stamp 29.661 ms
+op: relu, idx: 15, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469181.1860204, diff with last stamp 2.353 ms
+op: conv2d, idx: 16, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469181.2156267, diff with last stamp 29.606 ms
+op: relu, idx: 17, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469181.2180219, diff with last stamp 2.395 ms
+op: max_pool2d, idx: 18, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), None], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 28, 28])], output_size: 12.25 MB, conv: True, barrier: False
+	stamp 1705469181.2201767, diff with last stamp 2.155 ms
+op: conv2d, idx: 19, input_idxs: [0], input_shapes: [torch.Size([16, 256, 28, 28]), torch.Size([512, 256, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 16.751953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469181.2351065, diff with last stamp 14.930 ms
+op: relu, idx: 20, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469181.2364836, diff with last stamp 1.377 ms
+op: conv2d, idx: 21, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469181.2629652, diff with last stamp 26.482 ms
+op: relu, idx: 22, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469181.2642946, diff with last stamp 1.329 ms
+op: conv2d, idx: 23, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469181.2906778, diff with last stamp 26.383 ms
+op: relu, idx: 24, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469181.292143, diff with last stamp 1.465 ms
+op: conv2d, idx: 25, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469181.3186388, diff with last stamp 26.496 ms
+op: relu, idx: 26, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469181.3200254, diff with last stamp 1.387 ms
+op: max_pool2d, idx: 27, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), None], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469181.3212342, diff with last stamp 1.209 ms
+op: conv2d, idx: 28, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469181.3309333, diff with last stamp 9.699 ms
+op: relu, idx: 29, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469181.3314488, diff with last stamp 0.515 ms
+op: conv2d, idx: 30, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469181.3409634, diff with last stamp 9.515 ms
+op: relu, idx: 31, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469181.341558, diff with last stamp 0.595 ms
+op: conv2d, idx: 32, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469181.3511195, diff with last stamp 9.562 ms
+op: relu, idx: 33, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469181.351645, diff with last stamp 0.525 ms
+op: conv2d, idx: 34, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469181.361231, diff with last stamp 9.586 ms
+op: relu, idx: 35, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469181.361792, diff with last stamp 0.561 ms
+op: max_pool2d, idx: 36, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), None], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469181.3623188, diff with last stamp 0.527 ms
+op: adaptive_avg_pool2d, idx: 37, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469181.363383, diff with last stamp 1.064 ms
+op: flatten, idx: 38, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 25088])], output_size: 1.53125 MB, conv: False, barrier: True
+	stamp 1705469181.363638, diff with last stamp 0.255 ms
+op: linear, idx: 39, input_idxs: [0], input_shapes: [torch.Size([16, 25088]), torch.Size([4096, 25088]), torch.Size([4096])], input_size: 393.546875 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469181.3887017, diff with last stamp 25.064 ms
+op: relu, idx: 40, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469181.388937, diff with last stamp 0.235 ms
+op: dropout, idx: 41, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469181.3891575, diff with last stamp 0.221 ms
+op: linear, idx: 42, input_idxs: [0], input_shapes: [torch.Size([16, 4096]), torch.Size([4096, 4096]), torch.Size([4096])], input_size: 64.265625 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469181.3928525, diff with last stamp 3.695 ms
+op: relu, idx: 43, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469181.3932283, diff with last stamp 0.376 ms
+op: dropout, idx: 44, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469181.3934307, diff with last stamp 0.202 ms
+inference time: 490.642 ms, average 1037.513 ms
+op: conv2d, idx: 0, input_idxs: [0], input_shapes: [torch.Size([16, 3, 224, 224]), torch.Size([64, 3, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 9.1943359375 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469181.6682413, diff with last stamp 274.811 ms
+op: relu, idx: 1, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469181.677151, diff with last stamp 8.910 ms
+op: conv2d, idx: 2, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), torch.Size([64, 64, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 196.140869140625 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469181.7441044, diff with last stamp 66.953 ms
+op: relu, idx: 3, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469181.7528749, diff with last stamp 8.770 ms
+op: max_pool2d, idx: 4, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), None], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 112, 112])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469181.7605646, diff with last stamp 7.690 ms
+op: conv2d, idx: 5, input_idxs: [0], input_shapes: [torch.Size([16, 64, 112, 112]), torch.Size([128, 64, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 49.28173828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469181.794843, diff with last stamp 34.278 ms
+op: relu, idx: 6, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469181.7993374, diff with last stamp 4.494 ms
+op: conv2d, idx: 7, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), torch.Size([128, 128, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 98.56298828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469181.8403504, diff with last stamp 41.013 ms
+op: relu, idx: 8, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469181.844846, diff with last stamp 4.496 ms
+op: max_pool2d, idx: 9, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), None], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 56, 56])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469181.8488293, diff with last stamp 3.983 ms
+op: conv2d, idx: 10, input_idxs: [0], input_shapes: [torch.Size([16, 128, 56, 56]), torch.Size([256, 128, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 25.6259765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469181.8676107, diff with last stamp 18.781 ms
+op: relu, idx: 11, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469181.8700144, diff with last stamp 2.404 ms
+op: conv2d, idx: 12, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469181.899658, diff with last stamp 29.644 ms
+op: relu, idx: 13, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469181.9020114, diff with last stamp 2.353 ms
+op: conv2d, idx: 14, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469181.9317405, diff with last stamp 29.729 ms
+op: relu, idx: 15, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469181.9342124, diff with last stamp 2.472 ms
+op: conv2d, idx: 16, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469181.9638784, diff with last stamp 29.666 ms
+op: relu, idx: 17, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469181.9662263, diff with last stamp 2.348 ms
+op: max_pool2d, idx: 18, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), None], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 28, 28])], output_size: 12.25 MB, conv: True, barrier: False
+	stamp 1705469181.9683821, diff with last stamp 2.156 ms
+op: conv2d, idx: 19, input_idxs: [0], input_shapes: [torch.Size([16, 256, 28, 28]), torch.Size([512, 256, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 16.751953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469181.983527, diff with last stamp 15.145 ms
+op: relu, idx: 20, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469181.9849777, diff with last stamp 1.451 ms
+op: conv2d, idx: 21, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469182.0112023, diff with last stamp 26.225 ms
+op: relu, idx: 22, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469182.012564, diff with last stamp 1.362 ms
+op: conv2d, idx: 23, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469182.0389814, diff with last stamp 26.417 ms
+op: relu, idx: 24, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469182.040318, diff with last stamp 1.337 ms
+op: conv2d, idx: 25, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469182.066523, diff with last stamp 26.205 ms
+op: relu, idx: 26, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469182.067928, diff with last stamp 1.405 ms
+op: max_pool2d, idx: 27, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), None], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469182.0691705, diff with last stamp 1.242 ms
+op: conv2d, idx: 28, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469182.0788486, diff with last stamp 9.678 ms
+op: relu, idx: 29, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469182.0794315, diff with last stamp 0.583 ms
+op: conv2d, idx: 30, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469182.0889602, diff with last stamp 9.529 ms
+op: relu, idx: 31, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469182.0894854, diff with last stamp 0.525 ms
+op: conv2d, idx: 32, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469182.0990782, diff with last stamp 9.593 ms
+op: relu, idx: 33, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469182.0995975, diff with last stamp 0.519 ms
+op: conv2d, idx: 34, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469182.1091769, diff with last stamp 9.579 ms
+op: relu, idx: 35, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469182.1096873, diff with last stamp 0.510 ms
+op: max_pool2d, idx: 36, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), None], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469182.1101952, diff with last stamp 0.508 ms
+op: adaptive_avg_pool2d, idx: 37, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469182.111266, diff with last stamp 1.071 ms
+op: flatten, idx: 38, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 25088])], output_size: 1.53125 MB, conv: False, barrier: True
+	stamp 1705469182.1115236, diff with last stamp 0.258 ms
+op: linear, idx: 39, input_idxs: [0], input_shapes: [torch.Size([16, 25088]), torch.Size([4096, 25088]), torch.Size([4096])], input_size: 393.546875 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469182.1353512, diff with last stamp 23.828 ms
+op: relu, idx: 40, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469182.1356766, diff with last stamp 0.325 ms
+op: dropout, idx: 41, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469182.135923, diff with last stamp 0.246 ms
+op: linear, idx: 42, input_idxs: [0], input_shapes: [torch.Size([16, 4096]), torch.Size([4096, 4096]), torch.Size([4096])], input_size: 64.265625 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469182.1395652, diff with last stamp 3.642 ms
+op: relu, idx: 43, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469182.1398656, diff with last stamp 0.300 ms
+op: dropout, idx: 44, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469182.1400664, diff with last stamp 0.201 ms
+inference time: 488.750 ms, average 976.539 ms
+op: conv2d, idx: 0, input_idxs: [0], input_shapes: [torch.Size([16, 3, 224, 224]), torch.Size([64, 3, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 9.1943359375 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469182.5558307, diff with last stamp 415.764 ms
+op: relu, idx: 1, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469182.5646367, diff with last stamp 8.806 ms
+op: conv2d, idx: 2, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), torch.Size([64, 64, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 196.140869140625 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469182.631396, diff with last stamp 66.759 ms
+op: relu, idx: 3, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469182.6401057, diff with last stamp 8.710 ms
+op: max_pool2d, idx: 4, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), None], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 112, 112])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469182.6477976, diff with last stamp 7.692 ms
+op: conv2d, idx: 5, input_idxs: [0], input_shapes: [torch.Size([16, 64, 112, 112]), torch.Size([128, 64, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 49.28173828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469182.6819482, diff with last stamp 34.151 ms
+op: relu, idx: 6, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469182.6864498, diff with last stamp 4.502 ms
+op: conv2d, idx: 7, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), torch.Size([128, 128, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 98.56298828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469182.7274969, diff with last stamp 41.047 ms
+op: relu, idx: 8, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469182.7319887, diff with last stamp 4.492 ms
+op: max_pool2d, idx: 9, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), None], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 56, 56])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469182.7359548, diff with last stamp 3.966 ms
+op: conv2d, idx: 10, input_idxs: [0], input_shapes: [torch.Size([16, 128, 56, 56]), torch.Size([256, 128, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 25.6259765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469182.7546794, diff with last stamp 18.725 ms
+op: relu, idx: 11, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469182.7571084, diff with last stamp 2.429 ms
+op: conv2d, idx: 12, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469182.7868266, diff with last stamp 29.718 ms
+op: relu, idx: 13, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469182.789177, diff with last stamp 2.350 ms
+op: conv2d, idx: 14, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469182.8188543, diff with last stamp 29.677 ms
+op: relu, idx: 15, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469182.8212478, diff with last stamp 2.393 ms
+op: conv2d, idx: 16, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469182.8509586, diff with last stamp 29.711 ms
+op: relu, idx: 17, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469182.8533576, diff with last stamp 2.399 ms
+op: max_pool2d, idx: 18, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), None], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 28, 28])], output_size: 12.25 MB, conv: True, barrier: False
+	stamp 1705469182.8554826, diff with last stamp 2.125 ms
+op: conv2d, idx: 19, input_idxs: [0], input_shapes: [torch.Size([16, 256, 28, 28]), torch.Size([512, 256, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 16.751953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469182.8703902, diff with last stamp 14.908 ms
+op: relu, idx: 20, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469182.8716877, diff with last stamp 1.297 ms
+op: conv2d, idx: 21, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469182.8978608, diff with last stamp 26.173 ms
+op: relu, idx: 22, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469182.8991776, diff with last stamp 1.317 ms
+op: conv2d, idx: 23, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469182.925397, diff with last stamp 26.219 ms
+op: relu, idx: 24, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469182.9268253, diff with last stamp 1.428 ms
+op: conv2d, idx: 25, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469182.9531825, diff with last stamp 26.357 ms
+op: relu, idx: 26, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469182.9545083, diff with last stamp 1.326 ms
+op: max_pool2d, idx: 27, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), None], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469182.955749, diff with last stamp 1.241 ms
+op: conv2d, idx: 28, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469182.9654694, diff with last stamp 9.720 ms
+op: relu, idx: 29, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469182.9659855, diff with last stamp 0.516 ms
+op: conv2d, idx: 30, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469182.9757113, diff with last stamp 9.726 ms
+op: relu, idx: 31, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469182.9762378, diff with last stamp 0.526 ms
+op: conv2d, idx: 32, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469182.9858868, diff with last stamp 9.649 ms
+op: relu, idx: 33, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469182.986401, diff with last stamp 0.514 ms
+op: conv2d, idx: 34, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469182.995932, diff with last stamp 9.531 ms
+op: relu, idx: 35, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469182.9964755, diff with last stamp 0.543 ms
+op: max_pool2d, idx: 36, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), None], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469182.9970129, diff with last stamp 0.537 ms
+op: adaptive_avg_pool2d, idx: 37, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469182.9980998, diff with last stamp 1.087 ms
+op: flatten, idx: 38, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 25088])], output_size: 1.53125 MB, conv: False, barrier: True
+	stamp 1705469182.9983299, diff with last stamp 0.230 ms
+op: linear, idx: 39, input_idxs: [0], input_shapes: [torch.Size([16, 25088]), torch.Size([4096, 25088]), torch.Size([4096])], input_size: 393.546875 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469183.0234444, diff with last stamp 25.115 ms
+op: relu, idx: 40, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469183.0238192, diff with last stamp 0.375 ms
+op: dropout, idx: 41, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469183.0240717, diff with last stamp 0.252 ms
+op: linear, idx: 42, input_idxs: [0], input_shapes: [torch.Size([16, 4096]), torch.Size([4096, 4096]), torch.Size([4096])], input_size: 64.265625 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469183.027851, diff with last stamp 3.779 ms
+op: relu, idx: 43, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469183.028113, diff with last stamp 0.262 ms
+op: dropout, idx: 44, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469183.0282865, diff with last stamp 0.174 ms
+inference time: 489.310 ms, average 927.816 ms
+op: conv2d, idx: 0, input_idxs: [0], input_shapes: [torch.Size([16, 3, 224, 224]), torch.Size([64, 3, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 9.1943359375 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469183.5111275, diff with last stamp 482.841 ms
+op: relu, idx: 1, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469183.5199263, diff with last stamp 8.799 ms
+op: conv2d, idx: 2, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), torch.Size([64, 64, 3, 3]), torch.Size([64]), None, None, None, None], input_size: 196.140869140625 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: True, barrier: False
+	stamp 1705469183.5868447, diff with last stamp 66.918 ms
+op: relu, idx: 3, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224])], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 224, 224])], output_size: 196.0 MB, conv: False, barrier: False
+	stamp 1705469183.5955975, diff with last stamp 8.753 ms
+op: max_pool2d, idx: 4, input_idxs: [0], input_shapes: [torch.Size([16, 64, 224, 224]), None], input_size: 196.0 MB, output_shapes: [torch.Size([16, 64, 112, 112])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469183.6033518, diff with last stamp 7.754 ms
+op: conv2d, idx: 5, input_idxs: [0], input_shapes: [torch.Size([16, 64, 112, 112]), torch.Size([128, 64, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 49.28173828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469183.6375563, diff with last stamp 34.204 ms
+op: relu, idx: 6, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469183.6420224, diff with last stamp 4.466 ms
+op: conv2d, idx: 7, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), torch.Size([128, 128, 3, 3]), torch.Size([128]), None, None, None, None], input_size: 98.56298828125 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: True, barrier: False
+	stamp 1705469183.6831217, diff with last stamp 41.099 ms
+op: relu, idx: 8, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112])], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 112, 112])], output_size: 98.0 MB, conv: False, barrier: False
+	stamp 1705469183.687701, diff with last stamp 4.579 ms
+op: max_pool2d, idx: 9, input_idxs: [0], input_shapes: [torch.Size([16, 128, 112, 112]), None], input_size: 98.0 MB, output_shapes: [torch.Size([16, 128, 56, 56])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469183.6917064, diff with last stamp 4.005 ms
+op: conv2d, idx: 10, input_idxs: [0], input_shapes: [torch.Size([16, 128, 56, 56]), torch.Size([256, 128, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 25.6259765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469183.7105134, diff with last stamp 18.807 ms
+op: relu, idx: 11, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469183.712933, diff with last stamp 2.420 ms
+op: conv2d, idx: 12, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469183.7427912, diff with last stamp 29.858 ms
+op: relu, idx: 13, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469183.7453558, diff with last stamp 2.565 ms
+op: conv2d, idx: 14, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469183.7752404, diff with last stamp 29.885 ms
+op: relu, idx: 15, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469183.7777376, diff with last stamp 2.497 ms
+op: conv2d, idx: 16, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), torch.Size([256, 256, 3, 3]), torch.Size([256]), None, None, None, None], input_size: 51.2509765625 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: True, barrier: False
+	stamp 1705469183.807409, diff with last stamp 29.671 ms
+op: relu, idx: 17, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56])], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 56, 56])], output_size: 49.0 MB, conv: False, barrier: False
+	stamp 1705469183.8098357, diff with last stamp 2.427 ms
+op: max_pool2d, idx: 18, input_idxs: [0], input_shapes: [torch.Size([16, 256, 56, 56]), None], input_size: 49.0 MB, output_shapes: [torch.Size([16, 256, 28, 28])], output_size: 12.25 MB, conv: True, barrier: False
+	stamp 1705469183.8120182, diff with last stamp 2.182 ms
+op: conv2d, idx: 19, input_idxs: [0], input_shapes: [torch.Size([16, 256, 28, 28]), torch.Size([512, 256, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 16.751953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469183.8269818, diff with last stamp 14.964 ms
+op: relu, idx: 20, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469183.8283358, diff with last stamp 1.354 ms
+op: conv2d, idx: 21, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469183.8544025, diff with last stamp 26.067 ms
+op: relu, idx: 22, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469183.8557134, diff with last stamp 1.311 ms
+op: conv2d, idx: 23, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469183.8820407, diff with last stamp 26.327 ms
+op: relu, idx: 24, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469183.8833523, diff with last stamp 1.312 ms
+op: conv2d, idx: 25, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 33.501953125 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: True, barrier: False
+	stamp 1705469183.9096296, diff with last stamp 26.277 ms
+op: relu, idx: 26, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28])], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 28, 28])], output_size: 24.5 MB, conv: False, barrier: False
+	stamp 1705469183.9109476, diff with last stamp 1.318 ms
+op: max_pool2d, idx: 27, input_idxs: [0], input_shapes: [torch.Size([16, 512, 28, 28]), None], input_size: 24.5 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469183.9121823, diff with last stamp 1.235 ms
+op: conv2d, idx: 28, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469183.921862, diff with last stamp 9.680 ms
+op: relu, idx: 29, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469183.9224033, diff with last stamp 0.541 ms
+op: conv2d, idx: 30, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469183.9320712, diff with last stamp 9.668 ms
+op: relu, idx: 31, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469183.9326158, diff with last stamp 0.545 ms
+op: conv2d, idx: 32, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469183.9422207, diff with last stamp 9.605 ms
+op: relu, idx: 33, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469183.9428093, diff with last stamp 0.589 ms
+op: conv2d, idx: 34, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), torch.Size([512, 512, 3, 3]), torch.Size([512]), None, None, None, None], input_size: 15.126953125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: True, barrier: False
+	stamp 1705469183.9523153, diff with last stamp 9.506 ms
+op: relu, idx: 35, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14])], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 14, 14])], output_size: 6.125 MB, conv: False, barrier: False
+	stamp 1705469183.9528868, diff with last stamp 0.571 ms
+op: max_pool2d, idx: 36, input_idxs: [0], input_shapes: [torch.Size([16, 512, 14, 14]), None], input_size: 6.125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469183.953416, diff with last stamp 0.529 ms
+op: adaptive_avg_pool2d, idx: 37, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 512, 7, 7])], output_size: 1.53125 MB, conv: True, barrier: False
+	stamp 1705469183.9544992, diff with last stamp 1.083 ms
+op: flatten, idx: 38, input_idxs: [0], input_shapes: [torch.Size([16, 512, 7, 7]), None], input_size: 1.53125 MB, output_shapes: [torch.Size([16, 25088])], output_size: 1.53125 MB, conv: False, barrier: True
+	stamp 1705469183.9547863, diff with last stamp 0.287 ms
+op: linear, idx: 39, input_idxs: [0], input_shapes: [torch.Size([16, 25088]), torch.Size([4096, 25088]), torch.Size([4096])], input_size: 393.546875 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469183.9786015, diff with last stamp 23.815 ms
+op: relu, idx: 40, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469183.9789562, diff with last stamp 0.355 ms
+op: dropout, idx: 41, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469183.979229, diff with last stamp 0.273 ms
+op: linear, idx: 42, input_idxs: [0], input_shapes: [torch.Size([16, 4096]), torch.Size([4096, 4096]), torch.Size([4096])], input_size: 64.265625 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469183.9828663, diff with last stamp 3.637 ms
+op: relu, idx: 43, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: False
+	stamp 1705469183.9831078, diff with last stamp 0.242 ms
+op: dropout, idx: 44, input_idxs: [0], input_shapes: [torch.Size([16, 4096])], input_size: 0.25 MB, output_shapes: [torch.Size([16, 4096])], output_size: 0.25 MB, conv: False, barrier: True
+	stamp 1705469183.9832819, diff with last stamp 0.174 ms
+inference time: 489.008 ms, average 887.924 ms

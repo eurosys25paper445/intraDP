@@ -1,0 +1,41 @@
+\begin{tabular}{ccc|c|c|c|c|c|c}
+\toprule
+ &  &  & \multicolumn{2}{|c|}{Transmission time/s} & \multicolumn{2}{|c|}{Inference time/s} & \multicolumn{2}{|c|}{Percentage(\%)} \\
+ &  &  & indoors & outdoors & indoors & outdoors & indoors & outdoors \\
+Model(number of parameters) & Local computation time/s & System &  &  &  &  &  &  \\
+\midrule
+MobileNet\_V3\_Small(0.00M) & 0.0 & DSCCS & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\cline{1-9} \cline{2-9}
+MobileNet\_V3\_Small(2M) & 0.05($\pm$0.01) & SPSO-GA & 0.01($\pm$0.0) & 0.02($\pm$0.03) & 0.03($\pm$0.0) & 0.04($\pm$0.03) & 27.24 & 45.39 \\
+\cline{1-9} \cline{2-9}
+MobileNet\_V3\_Small(0.00M) & 0.0 & Intra-DP & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\cline{1-9} \cline{2-9}
+RegNet\_X\_3\_2GF(0.00M) & 0.0 & DSCCS & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\cline{1-9} \cline{2-9}
+RegNet\_X\_3\_2GF(15M) & 0.08($\pm$0.01) & SPSO-GA & 0.03($\pm$0.02) & 0.05($\pm$0.14) & 0.07($\pm$0.02) & 0.09($\pm$0.14) & 47.72 & 58.92 \\
+\cline{1-9} \cline{2-9}
+RegNet\_X\_3\_2GF(0.00M) & 0.0 & Intra-DP & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\cline{1-9} \cline{2-9}
+ResNet101(0.00M) & 0.0 & DSCCS & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\cline{1-9} \cline{2-9}
+ResNet101(44M) & 0.08($\pm$0.01) & SPSO-GA & 0.05($\pm$0.03) & 0.07($\pm$0.19) & 0.06($\pm$0.04) & 0.08($\pm$0.19) & 76.48 & 78.67 \\
+\cline{1-9} \cline{2-9}
+ResNet101(0.00M) & 0.0 & Intra-DP & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\cline{1-9} \cline{2-9}
+\multirow[t]{2}{*}{ConvNeXt\_Base(88M)} & \multirow[t]{2}{*}{0.16($\pm$0.01)} & DSCCS & 0.05($\pm$0.03) & 0.06($\pm$0.03) & 0.07($\pm$0.03) & 0.08($\pm$0.03) & 74.06 & 75.34 \\
+ &  & SPSO-GA & 0.05($\pm$0.04) & 0.05($\pm$0.05) & 0.11($\pm$1.88) & 0.08($\pm$0.03) & 44.32 & 68.96 \\
+\cline{1-9} \cline{2-9}
+ConvNeXt\_Base(0.00M) & 0.0 & Intra-DP & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\cline{1-9} \cline{2-9}
+\multirow[t]{2}{*}{VGG19\_BN(143M)} & \multirow[t]{2}{*}{0.0($\pm$0.0)} & DSCCS & 0.05($\pm$0.03) & 0.06($\pm$0.03) & 0.07($\pm$0.03) & 0.07($\pm$0.03) & 79.99 & 81.62 \\
+ &  & SPSO-GA & 0.0($\pm$0.0) & 0.05($\pm$0.05) & 0.0($\pm$0.0) & 0.07($\pm$0.02) & nan & 65.30 \\
+\cline{1-9} \cline{2-9}
+VGG19\_BN(0.00M) & 0.0 & Intra-DP & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\cline{1-9} \cline{2-9}
+\multirow[t]{2}{*}{ConvNeXt\_Large(197M)} & \multirow[t]{2}{*}{0.32($\pm$0.06)} & DSCCS & 0.05($\pm$0.03) & 0.06($\pm$0.03) & 0.08($\pm$0.03) & 0.08($\pm$0.03) & 69.53 & 71.71 \\
+ &  & SPSO-GA & 0.05($\pm$0.03) & 0.06($\pm$0.03) & 0.08($\pm$0.03) & 0.08($\pm$0.03) & 70.11 & 71.68 \\
+\cline{1-9} \cline{2-9}
+ConvNeXt\_Large(0.00M) & 0.0 & Intra-DP & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\cline{1-9} \cline{2-9}
+\bottomrule
+\end{tabular}

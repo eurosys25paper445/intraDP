@@ -1,0 +1,15 @@
+[submodule "third_parties/DDP"]
+	path = third_parties/DDP
+	url = https://github.com/JiYuanFeng/DDP.git
+[submodule "third_parties/Object-Goal-Navigation"]
+	path = third_parties/Object-Goal-Navigation
+	url = https://github.com/devendrachaplot/Object-Goal-Navigation.git
+[submodule "third_parties/AGRNav"]
+	path = third_parties/AGRNav
+	url = https://github.com/jmwang0117/AGRNav.git
+[submodule "CacheInf/baselines/sige"]
+	path = CacheInf/baselines/sige
+	url = https://github.com/lmxyy/sige.git
+[submodule "CacheInf/utils/Pytorch_Memory_Utils"]
+	path = CacheInf/utils/Pytorch-Memory-Utils
+	url = https://github.com/Oldpan/Pytorch-Memory-Utils.git
